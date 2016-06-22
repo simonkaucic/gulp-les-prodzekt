@@ -10,7 +10,7 @@ var del = require('del');
 
 //Less task
 gulp.task('less', function() {
-    return gulp.src('app/less/*.less')
+    return gulp.src('app/less/styles.less')
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -58,4 +58,5 @@ gulp.task('watch', function() {
 });
 
 // Difolt tesk
+//gulp.task('default', gulp.series('clean', 'less', 'jquery' , 'scripts', 'images', 'watch'));
 gulp.task('default', gulp.series('clean', 'less', 'jquery' , 'scripts', 'images', 'watch'));

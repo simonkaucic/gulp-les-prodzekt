@@ -1,24 +1,55 @@
-// Bootstrap with LESS
-/*
-@import "../../node_modules/bootstrap-less/bootstrap/bootstrap.less";
-@import "variables.less";
+/*@import "variables.less";
+@import "mixins.less";
+@import "parametric-mixins.less";
+@import "nesting.less";
+@import "operations.less";
+@import "functions.less";
 */
+@import "variables.less";
+@import "mixins.less";
+@import "parametric-mixins.less";
+@import "nesting.less";
+@import "operations.less";
+@import "functions.less";
 
 body {
-    background: url('img/wallpaper.jpg');
+    background: #DFDFDF;
+    color: #404040;
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+    line-height: 22px;
 }
 
-h2 {
-    font-size: 20px;
-    color: crimson;
-    text-align: center;
+.wrap {
+    width: 768px;
+    margin: 0 auto;
+}
 
-    strong {
-        color: brown;
-        font-size: 30px;
+h1 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 40px 0;
+    margin: 0;
+}
+
+section.container {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+
+    &.last-child {
+        border-bottom: none;
+        padding-bottom: 100px;
     }
 }
 
-input {
-    &.btn { padding: 20px; }
+/**
+ * ClearFix
+ */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
 }
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
